@@ -1,5 +1,4 @@
-
-*{
+* {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
 }
@@ -10,15 +9,16 @@ body {
     box-sizing: border-box;
 }
 
-:root{
-    --border_d:1px solid black;
-    --border_w:1px solid white;
-    --back_white:white;
+:root {
+    --border_d: 1px solid black;
+    --border_w: 1px solid white;
+    --back_white: white;
 }
-                        /* navbar */
+
+/* navbar */
 
 
-.nav{
+.nav {
     width: 100%;
     height: 70px;
     border: var(--border_d);
@@ -26,27 +26,31 @@ body {
     justify-content: center;
     align-items: center;
 }
-.nav_under{
+
+.nav_under {
     width: 1350px;
     height: 60px;
     border: var(--border_d);
     display: flex;
 }
-.logo{
+
+.logo {
     width: 228px;
     height: 60px;
     border: var(--border_d);
     display: flex;
     align-items: center;
 }
-.booking_btfh{
+
+.booking_btfh {
     width: 550px;
     height: 60px;
     border: var(--border_d);
     display: flex;
     justify-content: space-evenly;
 }
-.bus{
+
+.bus {
     width: 112.5px;
     height: 56.8px;
     border: var(--border_d);
@@ -56,7 +60,7 @@ body {
     margin-left: 10px;
 }
 
-.bus_2{
+.bus_2 {
     width: 112.5px;
     height: 56.8px;
     border: var(--border_d);
@@ -64,7 +68,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.bus_3{
+
+.bus_3 {
     width: 112.5px;
     height: 56.8px;
     border: var(--border_d);
@@ -72,7 +77,8 @@ body {
     justify-content: center;
     align-items: center;
 }
-.bus_4{
+
+.bus_4 {
     width: 112.5px;
     height: 56.8px;
     border: var(--border_d);
@@ -80,44 +86,34 @@ body {
     justify-content: center;
     align-items: center;
 }
-.offer_div{
+
+.offer_div {
     width: 600px;
     height: 60px;
     border: var(--border_d);
-  display: flex;
+    display: flex;
 }
-.offer_icon{
+
+.offer_icon {
     width: 120px;
-    height: 56.8px;  
-      border: var(--border_d);
-display: flex;
-align-items: center;
+    height: 56.8px;
+    border: var(--border_d);
+    display: flex;
+    align-items: center;
 }
-.icon{
-    width:30px;
-    height:30px;
+
+.icon {
+    width: 30px;
+    height: 30px;
     border: var(--border_d);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.icon_text{
-    width:80px;
-    height:35px;
- border: var(--border_d);
- font-size: 1.3rem;
- display: flex;
- justify-content: start;
-align-items: center;
-}
-.nav_icon{
-    width:30px;
-    height:30px;
-    border: var(--border_d);
-}
-.nav_icon_2{
-    width:80px;
-    height:35px;
+
+.icon_text {
+    width: 80px;
+    height: 35px;
     border: var(--border_d);
     font-size: 1.3rem;
     display: flex;
@@ -125,7 +121,23 @@ align-items: center;
     align-items: center;
 }
 
-                        /* sarch bar */
+.nav_icon {
+    width: 30px;
+    height: 30px;
+    border: var(--border_d);
+}
+
+.nav_icon_2 {
+    width: 80px;
+    height: 35px;
+    border: var(--border_d);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* sarch bar */
 
 
 
@@ -146,6 +158,7 @@ align-items: center;
     height: 160.71px;
     border: 1px solid;
 }
+
 
 .book_plase_under_1 {
     width: 1280px;
@@ -384,16 +397,96 @@ align-items: center;
 
 }
 
-                     /* Bus Booking Discount Offers */
+#froam_station_list {
+    width: 260.59px;
+    height: 250px;
+    /* border: 1px solid black; */
+    border-radius: 6px;
+    position: absolute;
+    top: 259px;
+    left: 156px;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: none;
+    background-color: white;
+    padding: 4px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#froam_station_list::-webkit-scrollbar {
+    width: 5px;
+    color: transparent;
+}
+
+#froam_station_list::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
 
 
-.bus_discount{
+.list {
+    width: 100%;
+    height: 61px;
+    /* border: 1px solid black; */
+    /* border-radius: 6px; */
+    display: flex;
+}
+
+.list:hover {
+    background-color: #f2f2f2cb;
+}
+
+
+.list_icon {
+    width: 45px;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_text {
+    width: 215px;
+    height: 61px;
+    /* border: 1px solid rgb(3, 3, 3); */
+
+}
+
+.city_name {
+    width: 215px;
+    height: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: end;
+    font-size: 16px;
+    margin-top: 3px;
+    font-family: sans-serif;
+
+}
+
+.city_name_two {
+    width: 215px;
+    height: 40%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: start;
+    margin-top: -17px;
+    color: #868686;
+    font-size: 13.333px;
+}
+
+/* Bus Booking Discount Offers */
+
+
+.bus_discount {
     width: 100%;
     height: 250px;
     border: var(--border_d);
     background-color: var(--back_white);
 }
-.bus_dicount_text{
+
+.bus_dicount_text {
     width: 100%;
     height: 50px;
     border: var(--border_d);
@@ -401,14 +494,16 @@ align-items: center;
     justify-content: end;
 
 }
-.bus_dicount_img{
+
+.bus_dicount_img {
     width: 100%;
     height: 199px;
     border: var(--border_d);
     display: flex;
     justify-content: end;
 }
-.dicount_text{
+
+.dicount_text {
     width: 90%;
     height: 50px;
     border: var(--border_d);
@@ -417,7 +512,8 @@ align-items: center;
     display: flex;
     align-items: center;
 }
-.all_img{
+
+.all_img {
     width: 90%;
     height: 199px;
     border: var(--border_d);
@@ -427,12 +523,14 @@ align-items: center;
     overflow-x: scroll;
     padding-left: 130px;
     padding-right: 100px;
- 
+
 }
-.all_img::-webkit-scrollbar{
+
+.all_img::-webkit-scrollbar {
     display: none;
 }
-.all_img_2{
+
+.all_img_2 {
     width: 340px;
     height: 170px;
     /* border: var(--border_d); */
@@ -440,30 +538,35 @@ align-items: center;
     border-radius: 20px;
     margin-left: 10px;
 }
-.all_poster{
+
+.all_poster {
     width: 340px;
     height: 170px;
     /* border: var(--border_d); */
     border-radius: 20px;
-  
+
 }
-.all_poster img{
+
+.all_poster img {
     border-radius: 20px;
 }
-.bus_dis_2{
+
+.bus_dis_2 {
     width: 100%;
     height: 100px;
     border: var(--border_d);
     background-color: var(--back_white);
 }
-.dis_text{
+
+.dis_text {
     width: 100%;
     height: 40px;
     border: var(--border_d);
     display: flex;
     justify-content: end;
 }
-.dis_text_2{
+
+.dis_text_2 {
     width: 90%;
     height: 40px;
     border: var(--border_d);
@@ -471,14 +574,16 @@ align-items: center;
     display: flex;
     align-items: center;
 }
-.dis_pera{
+
+.dis_pera {
     width: 100%;
     height: 59px;
     border: var(--border_d);
     display: flex;
     justify-content: end;
 }
-.dis_pera_2{
+
+.dis_pera_2 {
     width: 90%;
     height: 59px;
     border: var(--border_d);

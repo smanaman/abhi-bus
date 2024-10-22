@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>abhi-bus</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="./sarch.js"></script>
 </head>
 
 <body>
@@ -16,7 +19,6 @@
                 <p>Book Bus Tickets</p>
             </div>
             <div class="book_plase_under_2">
-
                 <div class="book_plase_sarch">
                     <div class="right">
                         <div class="froam_station">
@@ -27,7 +29,9 @@
                                         clip-rule="evenodd"></path>
                                 </svg></div>
                             <div class="input"><input class="input_tag" type="text" name="" id=""
-                                    placeholder="From Station" value=""></div>
+                                    placeholder="From Station">
+
+                            </div>
                         </div>
                         <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="2.525rem" height="2.525rem"
                                 fill="none" viewBox="0 0 44 42" style="color: grey; vertical-align: middle;">
@@ -46,7 +50,9 @@
                                             data-name="Path 1660"></path>
                                     </svg></div>
                                 <div class="input_2"><input class="input_tag_2" type="text" name="" id=""
-                                        placeholder="To station"></div>
+                                        placeholder="To station">
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -76,7 +82,187 @@
                 </div>
             </div>
         </div>
+
+
     </div>
+    <div id="froam_station_list">
+
+        <div class="list" onclick="Hyderabad()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="city">Hyderabad</div>
+                <br>
+                <div class="city_name_two" disabled>Telangana</div>
+            </div>
+        </div>
+        <div class="list" onclick="Bangalore()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="cityTwo">Bangalore</div>
+                <br>
+                <div class="city_name_two" disabled>Karnataka</div>
+            </div>
+        </div>
+        <div class="list" onclick="Chennai()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="cityThree">Chennai</div>
+                <br>
+                <div class="city_name_two" disabled>Tamil Nadu</div>
+            </div>
+        </div>
+        <div class="list" onclick="Goa()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="cityFour">Goa</div>
+                <br>
+                <div class="city_name_two" disabled>Goa</div>
+            </div>
+        </div>
+        <div class="list" onclick="Vijayawada()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="cityFive">Vijayawada</div>
+                <br>
+                <div class="city_name_two" disabled>Andhra Pradesh</div>
+            </div>
+        </div>
+        <div class="list" onclick="Nellore()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="citySix">Nellore</div>
+                <br>
+                <div class="city_name_two" disabled>Andhra Pradesh</div>
+            </div>
+        </div>
+        <div class="list" onclick="Jaipur()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="citySeven">Jaipur</div>
+                <br>
+                <div class="city_name_two" disabled>Rajsthan</div>
+            </div>
+        </div>
+        <div class="list" onclick="Mangalore()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="cityEight">Mangalore</div>
+                <br>
+                <div class="city_name_two" disabled>Karnataka</div>
+            </div>
+        </div>
+        <div class="list" onclick="Visakhapatnam()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="cityNine">Visakhapatnam</div>
+                <br>
+                <div class="city_name_two" disabled>TAndhra Pradesh</div>
+            </div>
+        </div>
+        <div class="list" onclick="Delhi()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="cityTen">Delhi</div>
+                <br>
+                <div class="city_name_two" disabled>Delhi</div>
+            </div>
+        </div>
+        <div class="list" onclick="Indore()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="city11">Indore</div>
+                <br>
+                <div class="city_name_two" disabled>Madhya Pradesh</div>
+            </div>
+        </div>
+        <div class="list" onclick="Kolkata()">
+            <div class="list_icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" fill="none"
+                    viewBox="0 0 22 22" style="color: black;">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.644 21.905a.55.55 0 0 1 0-1.1h.353v-4.39a.55.55 0 0 1 .55-.55h2.028V6.315a.55.55 0 0 1 .55-.55h2.887V3.223a.55.55 0 0 1 .55-.55h.31V.645a.55.55 0 0 1 .55-.55h5.156a.55.55 0 0 1 .55.55v2.028h.31a.55.55 0 0 1 .55.55v5.761l3.133 1.567a.55.55 0 0 1 .304.492v1.809l2.274 1.136a.55.55 0 0 1 .304.492v6.325h.352a.55.55 0 1 1 0 1.1H.644ZM13.028 2.674H8.972V1.195h4.056v1.478Zm.55 1.1h.31v4.661l-.923-.461a.55.55 0 0 0-.796.492v12.34H9.83V6.316a.55.55 0 0 0-.55-.55H8.112V3.773H13.578Zm3.747 17.032h-4.056V9.356l.913.456.012.006.008.004 3.123 1.562v9.422Zm2.578 0h-1.478v-6.724l1.478.74v5.984Zm-13.75 0H4.675v-1.598a.55.55 0 0 0-1.1 0v1.598H2.097v-3.84h4.056v3.84Zm-1.478-4.94h2.028a.55.55 0 0 1 .55.55v4.39h1.478V6.866H4.675v8.998Zm10.622-.835a.55.55 0 0 0 .55-.55v-1.289a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm-8.044-4.846a.55.55 0 1 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Zm-.55 4.417a.55.55 0 0 0 .55-.55v-1.29a.55.55 0 0 0-1.1 0v1.29c0 .303.246.55.55.55Zm9.144 3.747a.55.55 0 0 1-1.1 0v-1.29a.55.55 0 0 1 1.1 0v1.29Z"
+                        clip-rule="evenodd"></path>
+                </svg></div>
+            <div class="list_text">
+                <div class="city_name" id="city12">Kolkata</div>
+                <br>
+                <div class="city_name_two" disabled>West Bengal</div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('.froam_station').click(function () {
+                $('#froam_station_list').toggle()
+            })
+
+        })
+        $('#froam_station_list').click(function () {
+            $('#froam_station_list').css('display', 'none')
+        })
+
+    
+    </script>
 </body>
 
 </html>
