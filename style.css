@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-    --border_d: 1px solid black;
+    /* --border_d: 1px solid black; */
     --border_w: 1px solid white;
     --back_white: white;
 }
@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .nav_under {
@@ -148,9 +149,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://static.abhibus.com/web/media/backgrounds/search.20230915.webp);
-    background-position-x: center;
-    background-position-y: top;
+    background-image: url(https://static.abhibus.com/busimages/img/web-new-Final.webp);
+    background-position: center;
+    /* background-position-y: top; */
+    background-size: cover;
+    margin-top: 100px;
 }
 
 .book_plase {
@@ -396,6 +399,8 @@ body {
     border: 1px solid #f2f2f2;
 
 }
+/* first drop down */
+
 
 #froam_station_list {
     width: 260.59px;
@@ -403,7 +408,7 @@ body {
     /* border: 1px solid black; */
     border-radius: 6px;
     position: absolute;
-    top: 259px;
+    top: 426px;
     left: 156px;
     overflow: hidden;
     overflow-y: scroll;
@@ -462,6 +467,89 @@ body {
     font-size: 16px;
     margin-top: 3px;
     font-family: sans-serif;
+    z-index: 999;
+
+}
+
+.city_name_two {
+    width: 215px;
+    height: 40%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: start;
+    margin-top: -17px;
+    color: #868686;
+    font-size: 13.333px;
+    z-index: -999;
+}
+/* second droup down  */
+
+
+#froam_station_list_two {
+    width: 260.59px;
+    height: 250px;
+    /* border: 1px solid black; */
+    border-radius: 6px;
+    position: absolute;
+    top: 426px;
+    left: 492px;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: none;
+    background-color: white;
+    padding: 4px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#froam_station_list_two::-webkit-scrollbar {
+    width: 5px;
+    color: transparent;
+}
+
+#froam_station_list_two::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+}
+
+
+.list {
+    width: 100%;
+    height: 61px;
+    /* border: 1px solid black; */
+    /* border-radius: 6px; */
+    display: flex;
+}
+
+.list:hover {
+    background-color: #f2f2f2cb;
+}
+
+
+.list_icon {
+    width: 45px;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_text {
+    width: 215px;
+    height: 61px;
+    /* border: 1px solid rgb(3, 3, 3); */
+
+}
+
+.city_name {
+    width: 215px;
+    height: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: end;
+    font-size: 16px;
+    margin-top: 3px;
+    font-family: sans-serif;
 
 }
 
@@ -475,7 +563,6 @@ body {
     color: #868686;
     font-size: 13.333px;
 }
-
 /* Bus Booking Discount Offers */
 
 

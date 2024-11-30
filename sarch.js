@@ -1,139 +1,76 @@
-function Hyderabad() {
-    let city = document.getElementById('city')
 
-    let citytext = city.textContent
+// first  drop down
 
-    let input = document.querySelector('.input_tag')
+let array = ["Hyderabad", "Bangalore", "Chennai", "Goa", "Vijayawada", "Nellor", "Jaypur", "Mangalore", "Vishkhapatnam", "Delhi", "Indore", "Kolkata"];
 
-    let inp = input.setAttribute('value', citytext)
+array.forEach((city, index) => {
+    let cityElement = document.getElementById(`${index + 1}-city`);
+    // console.log(cityElement);
 
+    cityElement.addEventListener('click', () => {
+        let inp = document.querySelector('.input_tag');
+        inp.setAttribute('value', city);
 
-}
+    });
+});
 
-// city two
-function Bangalore() {
-    let city = document.getElementById('cityTwo')
+//second drop down
 
-    let citytext = city.textContent
+let arraytwo = ["Hyderabad", "Bangalore", "Chennai", "Goa", "Vijayawada", "Nellor", "Jaypur", "Mangalore", "Vishkhapatnam", "Delhi", "Indore", "Kolkata"];
+arraytwo.forEach((city, index) => {
+    let cityElementtwo = document.getElementById(`${index + 13}-city`);
+    // console.log(cityElementtwo);
 
-    let input = document.querySelector('.input_tag')
+    cityElementtwo.addEventListener('click', () => {
+        let inp2 = document.querySelector('.input_tag_2');
+        inp2.setAttribute('value', city);
 
-    let inp = input.setAttribute('value', citytext)
-
-
-}
-
-// city three
-function Chennai() {
-    let city = document.getElementById('cityThree')
-
-    let citytext = city.textContent
-
-    let input = document.querySelector('.input_tag')
-
-    let inp = input.setAttribute('value', citytext)
+    });
+});
 
 
-}// city four
-function Goa() {
-    let city = document.getElementById('cityFour')
 
-    let citytext = city.textContent
+//drop down jquary
+$(document).ready(function () {
 
-    let input = document.querySelector('.input_tag')
+    $('.froam_station').click(function () {
+        $('#froam_station_list').toggle()
+    })
 
-    let inp = input.setAttribute('value', citytext)
-
-
-}// city five
-function Vijayawada() {
-    let city = document.getElementById('cityFive')
-
-    let citytext = city.textContent
-
-    let input = document.querySelector('.input_tag')
-
-    let inp = input.setAttribute('value', citytext)
+})
+$('#froam_station_list').click(function () {
+    $('#froam_station_list').css('display', 'none')
+})
 
 
-}// city six
-function Nellore() {
-    let city = document.getElementById('citySix')
-
-    let citytext = city.textContent
-
-    let input = document.querySelector('.input_tag')
-
-    let inp = input.setAttribute('value', citytext)
 
 
-}// city seven
-function Jaipur() {
-    let city = document.getElementById('citySeven')
 
-    let citytext = city.textContent
+$(document).ready(function () {
 
-    let input = document.querySelector('.input_tag')
+    $('.froam_station_2').click(function () {
+        $('#froam_station_list_two').toggle()
+    })
 
-    let inp = input.setAttribute('value', citytext)
-
-
-}// city eight
-function Mangalore() {
-    let city = document.getElementById('cityEight')
-
-    let citytext = city.textContent
-
-    let input = document.querySelector('.input_tag')
-
-    let inp = input.setAttribute('value', citytext)
+})
+$('#froam_station_list_two').click(function () {
+    $('#froam_station_list_two').css('display', 'none')
+})
 
 
-}// city nine
-function Visakhapatnam() {
-    let city = document.getElementById('cityNine')
 
-    let citytext = city.textContent
+$(document).ready(function () {
 
-    let input = document.querySelector('.input_tag')
+    $('.froam_station').click(function () {
+        $('#froam_station_list_two').css('display', 'none')
 
-    let inp = input.setAttribute('value', citytext)
+    })
 
+    $('.froam_station_2').click(function () {
+        $('#froam_station_list').css('display', 'none')
 
-}
-// city ten
-function Delhi() {
-    let city = document.getElementById('cityTen')
+    })
 
-    let citytext = city.textContent
-
-    let input = document.querySelector('.input_tag')
-
-    let inp = input.setAttribute('value', citytext)
+})
 
 
-}
-//city 13
-function Indore() {
-    let city = document.getElementById('city11')
-
-    let citytext = city.textContent
-
-    let input = document.querySelector('.input_tag')
-
-    let inp = input.setAttribute('value', citytext)
-
-
-}
-//city 12
-function Kolkata() {
-    let city = document.getElementById('city12')
-
-    let citytext = city.textContent
-
-    let input = document.querySelector('.input_tag')
-
-    let inp = input.setAttribute('value', citytext)
-
-
-}
