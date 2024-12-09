@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-    /* --border_d: 1px solid black; */
+    --border_d: 1px solid black;
     --border_w: 1px solid white;
     --back_white: white;
 }
@@ -149,22 +149,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://static.abhibus.com/busimages/img/web-new-Final.webp);
+
+    margin-top: 15px;
+}
+.bg-img{
+     background-image: url(https://static.abhibus.com/busimages/img/web-new-Final.webp);
     background-position: center;
-    /* background-position-y: top; */
+    
     background-size: cover;
-    margin-top: 100px;
+}
+
+.dhar {
+    /* border: 1px solid black; */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+.arrowheitgh{
+    /* border: 1px solid black; */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
 }
 
 .book_plase {
-    width: 1280px;
+    width: 100%;
     height: 160.71px;
     border: 1px solid;
 }
 
 
 .book_plase_under_1 {
-    width: 1280px;
+    width: 100%;
     height: 40.31px;
     border: var(--border_d);
     display: flex;
@@ -175,17 +195,7 @@ body {
 
 }
 
-.book_plase_under_2 {
-    width: 1280px;
-    height: 85.4px;
-    /* border: 1px solid black; */
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--back_white);
-    border-radius: 10px;
-}
+
 
 .book_plase_sarch {
     width: 1240px;
@@ -197,34 +207,11 @@ body {
 
 }
 
-.right {
-    width: 50%;
-    height: 56px;
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.auto{
+    height: auto;
 }
 
-.froam_station {
-    width: 261.59px;
-    height: 56px;
-    border: 1px solid #f2f2f2;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--back_white);
-}
 
-.arrow {
-    width: 40.4px;
-    height: 40.4px;
-    border: 1px solid #f2f2f2;
-    border-radius: 10px;
-    background-color: #EEEEEE;
-    counter-reset: gray;
-}
 
 .to_station {
     width: 261.59px;
@@ -240,7 +227,9 @@ body {
     border-radius: 10px;
 }
 
-.froam_station_2 {
+
+
+.froam_station {
     width: 261.59px;
     height: 56px;
     border: 1px solid #f2f2f2;
@@ -255,12 +244,21 @@ body {
     width: 16px;
     height: 16px;
     /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
 }
 
 .bus_icon_2 {
     width: 16px;
     height: 16px;
     /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 3px;
+
 }
 
 .input {
@@ -295,13 +293,15 @@ body {
     padding-left: 8px;
 }
 
-.left {
-    width: 50%;
+.froam_station_2 {
+    width: 261.59px;
     height: 56px;
-    /* border: 1px solid black; */
-    margin-left: 10px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--back_white);
 }
 
 .calender_main {
@@ -327,9 +327,13 @@ body {
 .calender_icon {
     width: 16px;
     height: 16px;
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
-    /* border: 1px solid black;  */
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 1px solid black;      */
+    margin-top: 5px;
+    margin-left: 10px;
 }
 
 .input_calender {
@@ -363,7 +367,7 @@ body {
 }
 
 .today {
-    width: 72px;
+    width: 60px;
     height: 43.5px;
     background-color: #f2f2f2cb;
     border-radius: 6px;
@@ -373,7 +377,7 @@ body {
 }
 
 .tomorrow {
-    width: 101px;
+    width: 95px;
     height: 43.5px;
     background-color: #f2f2f2b8;
     border-radius: 6px;
@@ -383,13 +387,13 @@ body {
 }
 
 .sarch {
-    width: 171.28px;
+    width: 100%;
     height: 56px;
     /* border: 1px solid black; */
 }
 
 .sarch_2 {
-    width: 171.28px;
+    width: 100%;
     height: 56px;
     /* border: 1px solid black; */
     border-radius: 10px;
@@ -399,17 +403,204 @@ body {
     border: 1px solid #f2f2f2;
 
 }
+
+.arrow {
+    width: 40.4px;
+    height: 40.4px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+    counter-reset: gray;
+   padding: 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+   /* border: 3px solid black; */
+}
+@media (width <=500px) {
+    
+
+   
+    .arrowheight{
+        /* border: 1px solid black; */
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+    }
+}
+@media (width >=700px) {
+   
+
+    .froam_station {
+        width: 100%;
+        height: 60px;
+        border: 1px solid #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--back_white);
+
+    }
+    .froam_station_2 {
+        width: 100%;
+        height: 60px;
+        border: 1px solid #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--back_white);
+    }
+    .arrowheight{
+        /* border: 1px solid black; */
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+    }
+}
+
+
+   
+
+    @media (width >=1000px) {
+    
+        .froam_station {
+            width: 300.59px;
+            height: 60px;
+            border: 1px solid #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--back_white);
+            
+        }
+        .froam_station_2 {
+            width: 281.59px;
+            height: 60px;
+            border: 1px solid #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--back_white);
+        }
+        .calender_main {
+            width: 430.76px;
+            height: 60px;
+            border: 1px solid #f2f2f2;
+            display: flex;
+            border-radius: 10px;
+        }
+        .sarch {
+            width: 100%;
+            height: 56px;
+            display: flex;
+            justify-content: start;
+            border: 1px solid black;
+        }
+        
+        .sarch_2 {
+            width: 100%;
+            height: 56px;
+            border: 1px solid black;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: #dc635b;
+            color: white;
+            border: 1px solid #f2f2f2;
+        
+        }
+      
+    }
+
+
+    @media (width >=1200px) {
+  
+        .froam_station {
+            width: 261.59px;
+            height: 60px;
+            border: 1px solid #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--back_white);
+            
+        }
+        .froam_station_2 {
+            width: 261.59px;
+            height: 60px;
+            border: 1px solid #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--back_white);
+        }
+        .calender_main {
+            width: 430.76px;
+            height: 60px;
+            border: 1px solid #f2f2f2;
+            display: flex;
+            border-radius: 10px;
+        }
+        .sarch {
+            width: 100%;
+            height: 56px;
+            display: flex;
+            justify-content: start;
+            border: 1px solid black;
+        }
+        
+        .sarch_2 {
+            width: 100%;
+            height: 56px;
+            border: 1px solid black;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: #dc635b;
+            color: white;
+            border: 1px solid #f2f2f2;
+        
+        }
+        .today {
+            width: 55px;
+            height: 43.5px;
+            background-color: #f2f2f2cb;
+            border-radius: 6px;
+            font-size: 16px;
+            border: 1px solid #f2f2f2;
+        
+        }
+        
+        .tomorrow {
+            width: 77px;
+            height: 43.5px;
+            background-color: #f2f2f2b8;
+            border-radius: 6px;
+            font-size: 16px;
+            border: 1px solid #f2f2f2;
+        
+        }
+      
+    }
 /* first drop down */
 
 
 #froam_station_list {
-    width: 260.59px;
+    width: 255.59px;
     height: 250px;
     /* border: 1px solid black; */
     border-radius: 6px;
     position: absolute;
-    top: 426px;
-    left: 156px;
+    top: 342px;
+    left: 149px;
     overflow: hidden;
     overflow-y: scroll;
     display: none;
@@ -482,17 +673,18 @@ body {
     font-size: 13.333px;
     z-index: -999;
 }
+
 /* second droup down  */
 
 
 #froam_station_list_two {
-    width: 260.59px;
+    width: 255.59px;
     height: 250px;
     /* border: 1px solid black; */
     border-radius: 6px;
     position: absolute;
-    top: 426px;
-    left: 492px;
+    top: 342px;
+    left: 487px;
     overflow: hidden;
     overflow-y: scroll;
     display: none;
@@ -563,6 +755,7 @@ body {
     color: #868686;
     font-size: 13.333px;
 }
+
 /* Bus Booking Discount Offers */
 
 
@@ -571,6 +764,7 @@ body {
     height: 250px;
     border: var(--border_d);
     background-color: var(--back_white);
+    margin-top: 50px;
 }
 
 .bus_dicount_text {
@@ -579,6 +773,8 @@ body {
     border: var(--border_d);
     display: flex;
     justify-content: end;
+    border: 1px solid black;
+
 
 }
 
@@ -598,6 +794,8 @@ body {
     font-weight: 400;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
 }
 
 .all_img {
